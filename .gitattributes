@@ -1,0 +1,7 @@
+*.jpg           binary
+*.png           binary
+*.mwb           binary
+*.mwb.bak       binary
+*.pdf           binary
+*.doc           binary
+*.docx          binary
