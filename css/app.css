@@ -1,0 +1,482 @@
+#app-header {
+	color: white;
+	font-size: 22px;
+	font-weight: 200;
+	padding: 8px 15px;
+	text-shadow: 0 1px 0 #fff;
+}
+.warning-jumlah-laporan {
+	color: red;
+}
+
+a.btn {
+	text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+       -o-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.btn:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.btn:hover,
+.btn:focus {
+  color: #333;
+  text-decoration: none;
+}
+.btn:active,
+.btn.active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+}
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn {
+  pointer-events: none;
+  cursor: not-allowed;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  opacity: .65;
+}
+.btn-default {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.open .dropdown-toggle.btn-default {
+  color: #333;
+  background-color: #ebebeb;
+  border-color: #adadad;
+}
+.btn-default:active,
+.btn-default.active,
+.open .dropdown-toggle.btn-default {
+  background-image: none;
+}
+.btn-default.disabled,
+.btn-default[disabled],
+fieldset[disabled] .btn-default,
+.btn-default.disabled:hover,
+.btn-default[disabled]:hover,
+fieldset[disabled] .btn-default:hover,
+.btn-default.disabled:focus,
+.btn-default[disabled]:focus,
+fieldset[disabled] .btn-default:focus,
+.btn-default.disabled:active,
+.btn-default[disabled]:active,
+fieldset[disabled] .btn-default:active,
+.btn-default.disabled.active,
+.btn-default[disabled].active,
+fieldset[disabled] .btn-default.active {
+  background-color: #fff;
+  border-color: #ccc;
+}
+.btn-default .badge {
+  color: #fff;
+  background-color: #333;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #428bca;
+  border-color: #357ebd;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+  color: #fff;
+  background-color: #3276b1;
+  border-color: #285e8e;
+}
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+  background-image: none;
+}
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {
+  background-color: #428bca;
+  border-color: #357ebd;
+}
+.btn-primary .badge {
+  color: #428bca;
+  background-color: #fff;
+}
+.btn-success {
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active,
+.btn-success.active,
+.open .dropdown-toggle.btn-success {
+  color: #fff;
+  background-color: #47a447;
+  border-color: #398439;
+}
+.btn-success:active,
+.btn-success.active,
+.open .dropdown-toggle.btn-success {
+  background-image: none;
+}
+.btn-success.disabled,
+.btn-success[disabled],
+fieldset[disabled] .btn-success,
+.btn-success.disabled:hover,
+.btn-success[disabled]:hover,
+fieldset[disabled] .btn-success:hover,
+.btn-success.disabled:focus,
+.btn-success[disabled]:focus,
+fieldset[disabled] .btn-success:focus,
+.btn-success.disabled:active,
+.btn-success[disabled]:active,
+fieldset[disabled] .btn-success:active,
+.btn-success.disabled.active,
+.btn-success[disabled].active,
+fieldset[disabled] .btn-success.active {
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+.btn-success .badge {
+  color: #5cb85c;
+  background-color: #fff;
+}
+.btn-info {
+  color: #fff;
+  background-color: #5bc0de;
+  border-color: #46b8da;
+}
+.btn-info:hover,
+.btn-info:focus,
+.btn-info:active,
+.btn-info.active,
+.open .dropdown-toggle.btn-info {
+  color: #fff;
+  background-color: #39b3d7;
+  border-color: #269abc;
+}
+.btn-info:active,
+.btn-info.active,
+.open .dropdown-toggle.btn-info {
+  background-image: none;
+}
+.btn-info.disabled,
+.btn-info[disabled],
+fieldset[disabled] .btn-info,
+.btn-info.disabled:hover,
+.btn-info[disabled]:hover,
+fieldset[disabled] .btn-info:hover,
+.btn-info.disabled:focus,
+.btn-info[disabled]:focus,
+fieldset[disabled] .btn-info:focus,
+.btn-info.disabled:active,
+.btn-info[disabled]:active,
+fieldset[disabled] .btn-info:active,
+.btn-info.disabled.active,
+.btn-info[disabled].active,
+fieldset[disabled] .btn-info.active {
+  background-color: #5bc0de;
+  border-color: #46b8da;
+}
+.btn-info .badge {
+  color: #5bc0de;
+  background-color: #fff;
+}
+.btn-warning {
+  color: #fff;
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+.btn-warning:hover,
+.btn-warning:focus,
+.btn-warning:active,
+.btn-warning.active,
+.open .dropdown-toggle.btn-warning {
+  color: #fff;
+  background-color: #ed9c28;
+  border-color: #d58512;
+}
+.btn-warning:active,
+.btn-warning.active,
+.open .dropdown-toggle.btn-warning {
+  background-image: none;
+}
+.btn-warning.disabled,
+.btn-warning[disabled],
+fieldset[disabled] .btn-warning,
+.btn-warning.disabled:hover,
+.btn-warning[disabled]:hover,
+fieldset[disabled] .btn-warning:hover,
+.btn-warning.disabled:focus,
+.btn-warning[disabled]:focus,
+fieldset[disabled] .btn-warning:focus,
+.btn-warning.disabled:active,
+.btn-warning[disabled]:active,
+fieldset[disabled] .btn-warning:active,
+.btn-warning.disabled.active,
+.btn-warning[disabled].active,
+fieldset[disabled] .btn-warning.active {
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+.btn-warning .badge {
+  color: #f0ad4e;
+  background-color: #fff;
+}
+.btn-danger {
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+.btn-danger:hover,
+.btn-danger:focus,
+.btn-danger:active,
+.btn-danger.active,
+.open .dropdown-toggle.btn-danger {
+  color: #fff;
+  background-color: #d2322d;
+  border-color: #ac2925;
+}
+.btn-danger:active,
+.btn-danger.active,
+.open .dropdown-toggle.btn-danger {
+  background-image: none;
+}
+.btn-danger.disabled,
+.btn-danger[disabled],
+fieldset[disabled] .btn-danger,
+.btn-danger.disabled:hover,
+.btn-danger[disabled]:hover,
+fieldset[disabled] .btn-danger:hover,
+.btn-danger.disabled:focus,
+.btn-danger[disabled]:focus,
+fieldset[disabled] .btn-danger:focus,
+.btn-danger.disabled:active,
+.btn-danger[disabled]:active,
+fieldset[disabled] .btn-danger:active,
+.btn-danger.disabled.active,
+.btn-danger[disabled].active,
+fieldset[disabled] .btn-danger.active {
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+.btn-danger .badge {
+  color: #d9534f;
+  background-color: #fff;
+}
+.btn-link {
+  font-weight: normal;
+  color: #428bca;
+  cursor: pointer;
+  border-radius: 0;
+}
+.btn-link,
+.btn-link:active,
+.btn-link[disabled],
+fieldset[disabled] .btn-link {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.btn-link,
+.btn-link:hover,
+.btn-link:focus,
+.btn-link:active {
+  border-color: transparent;
+}
+.btn-link:hover,
+.btn-link:focus {
+  color: #2a6496;
+  text-decoration: underline;
+  background-color: transparent;
+}
+.btn-link[disabled]:hover,
+fieldset[disabled] .btn-link:hover,
+.btn-link[disabled]:focus,
+fieldset[disabled] .btn-link:focus {
+  color: #999;
+  text-decoration: none;
+}
+.btn-lg {
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 6px;
+}
+.btn-sm {
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+.btn-xs {
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+.btn-block {
+  display: block;
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+}
+.btn-block + .btn-block {
+  margin-top: 5px;
+}
+
+.icon-sortup {background-image:url(images/icons/sortup.gif) !important;}
+.icon-human {background-image:url(images/icons/human.gif) !important;}
+.icon-gnome {background-image:url(images/icons/gnome_16.png) !important;}
+.icon-cog {background-image:url(images/icons/cog.gif) !important;}
+.icon-tabs {background-image:url(images/icons/tabs.gif) !important;}
+.icon-information {background-image:url(images/icons/information.png) !important;}
+.icon-image_add {background-image:url(images/icons/image_add.png) !important;}
+.icon-help {background-image:url(images/icons/help.gif) !important;}
+.icon-smiley {background-image:url(images/icons/smiley.gif) !important;}
+.icon-gears {background-image:url(images/icons/gears.gif) !important;}
+.icon-course {background-image:url(images/icons/course.gif) !important;}
+.icon-check {background-image:url(images/icons/check.gif) !important;}
+.icon-spam {background-image:url(images/icons/spam.gif) !important;}
+.icon-plugin {background-image:url(images/icons/plugin.gif) !important;}
+.icon-cross {background-image:url(images/icons/cross.gif) !important;}
+.icon-send {background-image:url(images/icons/email_go.png) !important;}
+.icon-save {background-image:url(images/icons/save.gif) !important;}
+.icon-add {background-image:url(images/icons/add.png) !important;}
+.icon-edit {background-image:url(images/icons/edit.png) !important;}
+.icon-delete {background-image:url(images/icons/delete.png) !important;}
+.icon-undo {background-image:url(images/icons/undo.png) !important;}
+.icon-sort {background-image:url(images/icons/sort.gif) !important;}
+.icon-sort_clear {background-image:url(images/icons/sort_clear.gif) !important;}
+.icon-filter {background-image:url(images/icons/filter.png) !important;}
+.icon-filter_clear {background-image:url(images/icons/filter_clear.png) !important;}
+.icon-print {background-image:url(images/icons/printer.png) !important;}
+.icon-folder {background-image:url(images/icons/folder.gif) !important;}
+.icon-folder-open {background-image:url(images/icons/folder-open.gif) !important;}
+.icon-spell {background-image:url(images/icons/spellcheck.png) !important;}
+.icon-scales {background-image:url(images/icons/scales.gif) !important;}
+.icon-attach {background-image:url(images/icons/page_attach.png) !important;}
+.icon-minus-circle {background-image:url(images/icons/minus-circle.png) !important;}
+.icon-gears {background-image:url(images/icons/gears.gif) !important;}
+.icon-group16 {background-image:url(images/icons/group16.gif) !important;}
+.icon-templates {background-image:url(images/icons/templates.png) !important;}
+.icon-post_go {background-image:url(images/icons/post_go.gif) !important;}
+.icon-tickets {background-image:url(images/icons/tickets.png) !important;}
+.icon-printer {background-image:url(images/icons/printer.png) !important;}
+.icon-jpeg {background-image:url(images/icons/jpeg.png) !important;}
+.icon-pdf {background-image:url(images/icons/page_white_acrobat.png) !important;}
+.icon-xls {background-image:url(images/icons/excel.gif) !important;}
+.icon-doc {background-image:url(images/icons/doc.gif) !important;}
+.icon-zip {background-image:url(images/icons/zip.gif) !important;}
+.icon-member {background-image:url(images/icons/member.gif) !important;}
+.icon-user {background-image:url(images/icons/user.gif) !important;}
+.icon-useradd {background-image:url(images/icons/user_add.gif) !important;}
+.icon-useredit {background-image:url(images/icons/user_edit.png) !important;}
+.icon-userdel {background-image:url(images/icons/user_delete.gif) !important;}
+.icon-key {background-image:url(images/icons/key.gif) !important;}
+.icon-im16x16 {background-image:url(images/icons/im16x16.gif) !important;}
+.icon-toga {background-image:url(images/icons/toga.png) !important;}
+.icon-book {background-image:url(images/icons/book.png) !important;}
+.icon-star {background-image:url(images/icons/star.png) !important;}
+.icon-law {background-image:url(images/icons/law-icon_16.png) !important;}
+.icon-school {background-image:url(images/icons/school.png) !important;}
+.icon-show {background-image:url(images/icons/application_view_list.png) !important;}
+.icon-money_add {background-image:url(images/icons/money_add.png) !important;}
+.icon-money_del {background-image:url(images/icons/money_delete.png) !important;}
+.icon-menu_utama {background-image:url(images/icons/menu_utama.png) !important;}
+.icon-menu_layanan {background-image:url(images/icons/menu_layanan.png) !important;}
+.icon-menu_kepegawaian {background-image:url(images/icons/menu_kepegawaian.png) !important;}
+.icon-menu_diklat {background-image:url(images/icons/menu_diklat.png) !important;}
+.icon-menu_laporan {background-image:url(images/icons/menu_laporan.png) !important;}
+.icon-menu_pengguna {background-image:url(images/icons/menu_pengguna.png) !important;}
+.icon-menu_profil {background-image:url(images/icons/menu_profil.png) !important;}
+.icon-menu_seleksi {background-image:url(images/icons/menu_seleksi.png) !important;}
+.icon-menu_kgb {background-image:url(images/icons/menu_kgb.png) !important;}
+.icon-menu_impasing {background-image:url(images/icons/menu_impasing.png) !important;}
+.icon-menu_satya_lencana{background-image:url(images/icons/menu_satya_lencana.png) !important;}
+.icon-menu_pensiun{background-image:url(images/icons/menu_pensiun.png) !important;}
+.icon-menu_kenaikan_pangkat{background-image:url(images/icons/menu_kenaikan_pangkat.png) !important;}
+.icon-menu_izin_belajar{background-image:url(images/icons/menu_izin_belajar.png) !important;}
+.icon-menu_ujian_dinas{background-image:url(images/icons/menu_ujian_dinas.png) !important;}
+.icon-menu_cuti{background-image:url(images/icons/menu_cuti.png) !important;}
+.icon-menu_rikes{background-image:url(images/icons/menu_rikes.png) !important;}
+.icon-menu_meninggal{background-image:url(images/icons/menu_meninggal.png) !important;}
+.icon-menu_karpeg{background-image:url(images/icons/menu_karpeg.png) !important;}
+.icon-menu_karis{background-image:url(images/icons/menu_karis.png) !important;}
+.icon-menu_taperum{background-image:url(images/icons/menu_taperum.png) !important;}
+.icon-menu_log_pengguna{background-image:url(images/icons/menu_log_pengguna.png) !important;}
+.icon-menu_db_tools{background-image:url(images/icons/menu_db_tools.png) !important;}
+.icon-menu_mutasi_keluar{background-image:url(images/icons/menu_mutasi_keluar.png) !important;}
+.icon-menu_mutasi_masuk{background-image:url(images/icons/menu_mutasi_masuk.png) !important;}
+.icon-menu_surat_tugas{background-image:url(images/icons/menu_surat_tugas.png) !important;}
+.icon-menu_sotk{background-image:url(images/icons/menu_sotk.png) !important;}
+.icon-menu_pelantikan_ps{background-image:url(images/icons/menu_pelantikan_ps.png) !important;}
+.icon-menu_pelantikan_pf{background-image:url(images/icons/menu_pelantikan_pf.png) !important;}
+.icon-menu_skcpns{background-image:url(images/icons/menu_skcpns.png) !important;}
+.icon-menu_skpns{background-image:url(images/icons/menu_skpns.png) !important;}
+.icon-menu_skpmk{background-image:url(images/icons/menu_skpmk.png) !important;}
+.icon-menu_skmpp{background-image:url(images/icons/menu_skmpp.png) !important;}
+.icon-menu_disiplin{background-image:url(images/icons/menu_disiplin.png) !important;}
+.icon-menu_dp3{background-image:url(images/icons/menu_dp3.png) !important;}
+.icon-menu_tugas_belajar{background-image:url(images/icons/menu_tugas_belajar.png) !important;}
+.icon-menu_prajabatan{background-image:url(images/icons/menu_prajabatan.png) !important;}
+.icon-menu_pim{background-image:url(images/icons/menu_pim.png) !important;}
+.icon-menu_teknis{background-image:url(images/icons/menu_teknis.png) !important;}
+.icon-menu_lap_nom{background-image:url(images/icons/menu_lap_nom.gif) !important;}
+.icon-menu_lap_duk{background-image:url(images/icons/menu_lap_duk.png) !important;}
+.icon-menu_lap_pejabataktif{background-image:url(images/icons/menu_lap_pejabataktif.png) !important;}
+.icon-menu_lap_fungtertentu{background-image:url(images/icons/menu_lap_fungtertentu.png) !important;}
+.icon-menu_rekap_gol{background-image:url(images/icons/menu_rekap_gol.png) !important;}
+.icon-menu_rekap_eselon{background-image:url(images/icons/menu_rekap_eselon.png) !important;}
+.icon-menu_rekap_pddk{background-image:url(images/icons/menu_rekap_pddk.png) !important;}
+.icon-menu_rekap_usia{background-image:url(images/icons/menu_rekap_usia.png) !important;}
+.icon-menu_rekap_pensiun{background-image:url(images/icons/menu_rekap_pensiun.png) !important;}
+.icon-menu_rekap_ft{background-image:url(images/icons/scales.gif) !important;}
+.icon-menu_histori_rekap{background-image:url(images/icons/menu_histori_rekap.png) !important;}
+.icon-menu_histori_nominatif{background-image:url(images/icons/menu_histori_nominatif.png) !important;}
+.icon-menu_penggajian{background-image:url(images/icons/menu_penggajian.png) !important;}
+.icon-menu_seting_gaji{background-image:url(images/icons/menu_seting_gaji.png) !important;}
+.icon-menu_gaji{background-image:url(images/icons/menu_gaji.png) !important;}
+.icon-menu_pph21{background-image:url(images/icons/menu_histori_nominatif.png) !important;}

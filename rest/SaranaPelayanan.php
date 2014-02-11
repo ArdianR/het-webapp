@@ -25,4 +25,11 @@ class SaranaPelayanan extends AbstractModel
 
     public function lists() {
     }
+
+    public function checkByCode($kode='')
+    {
+    	$result = App::db()->exec('SELECT * FROM sarana_pelayanan WHERE kode_sarana = :kode_sarana',
+    							  array('kode_sarana' => $kode));
+    	return !empty($result);
+    }
 }

@@ -2,7 +2,7 @@
 /**
  * REST API Pelaporan HET
  */
-class ClassName extends AbstractModel
+class PelaporanHet extends AbstractModel
 {
 
 	function __construct($params = array())
@@ -10,9 +10,11 @@ class ClassName extends AbstractModel
 		parent::__construct($params);
 	}
 
-	public function get()
+	public function get($f3, $params)
 	{
-		# code...
+		$result = App::db()->exec('SELECT * FROM v_pelaporan_het WHERE id_het = :id_het',
+								  array('id_het' => $params['id']));
+		echo json_encode($result);
 	}
 
 	public function post()
@@ -29,5 +31,7 @@ class ClassName extends AbstractModel
     }
 
     public function lists() {
+    	$result = App::db()->exec('SELECT * FROM pelaporan_het');
+    	echo json_encode($result);
     }
 }

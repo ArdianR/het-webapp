@@ -5,8 +5,14 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Aplikasi HET</title>
 	<link rel="stylesheet" type="text/css" href="css/ext-theme-neptune-all.css">
+	<link rel="stylesheet" type="text/css" href="css/app.css">
 
-    <script type="text/javascript" src="js/ext-all-debug-w-comments.js"></script>
+    <script type="text/javascript" src="js/ext-all.js"></script>
+    <script type="text/javascript">
+    	conf = {};
+    	conf.BASE_URL = '<?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" ?>';
+    </script>
+    <script type="text/javascript" src="js/utility.js"></script>
 	<script type="text/javascript" src="app.js"></script>
 </head>
 <body></body>
