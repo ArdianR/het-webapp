@@ -4,6 +4,7 @@
  */
 class Het extends AbstractModel
 {
+    public $het;
 
 	function __construct($params = array())
 	{
@@ -31,6 +32,9 @@ class Het extends AbstractModel
     public function checkByCode($kode) {
     	$result = App::db()->exec('SELECT * FROM het WHERE kode_obat = :kode_obat',
     							  array('kode_obat' => $kode));
+        if (!empty($result))
+            $this->het = $result[0]['het'];
+
     	return !empty($result);
     }
 }

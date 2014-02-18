@@ -2,6 +2,7 @@ Ext.define('HET.view.het.List', {
     extend: 'Ext.grid.Panel',
     alias: 'widget.hetlist',
     title: 'Daftar Het',
+
     features: [{
         ftype: 'summary',
         dock: 'bottom'
@@ -11,7 +12,9 @@ Ext.define('HET.view.het.List', {
         this.store = {
             fields: ['nama_obat', 'het', {name: 'jumlah_laporan', type: 'int'}],
             autoDestroy: true,
-            autoLoad: true,
+            autoLoad: {start: 0, limit: 20},
+            pageSize: 20,
+            defaultSortable: true,
             proxy: {
                 type: 'rest',
                 url: conf.BASE_URL + 'het',
@@ -30,7 +33,11 @@ Ext.define('HET.view.het.List', {
             itemId: 'no',
             sortable: true
         },
-        {header: 'Nama Obat',  dataIndex: 'nama_obat',  flex: 2},
+        {
+            header: 'Nama Obat',
+            dataIndex: 'nama_obat',
+            flex: 2
+        },
         {
             header: 'HET',
             dataIndex: 'het',
@@ -60,6 +67,13 @@ Ext.define('HET.view.het.List', {
             summaryRenderer: function(value, summaryData, dataIndex) {
                 return value;
             }
+        }];
+
+        this.dockedItems = [{
+            xtype: 'pagingtoolbar',
+            store: this.getStore(),
+            dock: 'bottom',
+            displayInfo: true
         }];
 
         this.callParent(arguments);
