@@ -7,31 +7,17 @@ class PelaporanHet extends AbstractModel
 
 	function __construct($params = array())
 	{
-		parent::__construct($params);
+		parent::__construct(array(
+            'tableName' => 'pelaporan_het',
+            'primaryKey' => 'id'
+        ));
 	}
 
-	public function get($f3, $params)
-	{
-		$result = App::db()->exec('SELECT * FROM v_pelaporan_het WHERE id_het = :id_het',
-								  array('id_het' => $params['id']));
-		echo json_encode($result);
-	}
-
-	public function post()
-	{
-		# code...
-	}
-
-	public function put() {
-
-	}
-
-    public function delete() {
-
+    public function get($f3, $params) {
+        $this->jsonList($f3, 'v_list_pelaporan_het',  'nama_sarana ASC', array('id_het = ?', $params['id']));
     }
 
-    public function lists() {
-    	$result = App::db()->exec('SELECT * FROM pelaporan_het');
-    	echo json_encode($result);
+    public function lists($f3) {
+    	$this->jsonList($f3, 'v_list_pelaporan_het',  'nama_sarana ASC');
     }
 }

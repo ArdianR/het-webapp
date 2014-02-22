@@ -8,11 +8,17 @@
 	<link rel="stylesheet" type="text/css" href="css/app.css">
 
     <script type="text/javascript" src="js/ext-all.js"></script>
-    <script type="text/javascript">
-    	conf = {};
-    	conf.BASE_URL = '<?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" ?>';
-    </script>
     <script type="text/javascript" src="js/utility.js"></script>
+    <script type="text/javascript">
+    	conf = {
+    		BASE_URL: '<?php echo "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";?>',
+    		PAGESIZE: 20
+    	};
+    </script>
+    <script type="text/javascript" src="js/sarana-pelayanan.js"></script>
+    <script type="text/javascript" src="js/daftar-pengawas.js"></script>
+    <script type="text/javascript" src="js/log-sms.js"></script>
+    <script type="text/javascript" src="js/parameter.js"></script>
 	<script type="text/javascript" src="app.js"></script>
 </head>
 <body></body>

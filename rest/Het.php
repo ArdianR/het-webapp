@@ -4,29 +4,16 @@
  */
 class Het extends AbstractModel
 {
-    public $het;
-
 	function __construct($params = array())
 	{
-		parent::__construct($params);
+		parent::__construct(array(
+            'tableName' => 'het',
+            'primaryKey' => 'id'
+        ));
 	}
 
-	public function post()
-	{
-		# code...
-	}
-
-	public function put() {
-
-	}
-
-    public function delete() {
-
-    }
-
-    public function lists() {
-    	$result = App::db()->exec('SELECT * FROM v_het_pelaporan');
-    	echo json_encode($result);
+    public function lists($f3) {
+        $this->jsonList($f3, 'v_het_pelaporan', 'nama_obat ASC');
     }
 
     public function checkByCode($kode) {

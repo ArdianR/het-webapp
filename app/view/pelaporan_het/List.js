@@ -16,7 +16,7 @@ Ext.define('HET.view.pelaporan_het.List', {
                 type: 'rest',
                 url: conf.BASE_URL + 'pelaporan_het',
                 actionMethods: {read: "GET"},
-                reader: {type: 'json'},
+                reader: {type: 'json', root: 'results', totalProperty: 'total'},
                 writer: {type: 'json', encode: false}
             }
         };

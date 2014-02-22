@@ -19,7 +19,8 @@ class SmsGateway extends AbstractModel
 		//terdaftar
 		$daftar = App::db()->exec('SELECT sp.id AS id_sarana_pelayanan FROM pengawas p INNER JOIN sarana_pelayanan sp ON p.id = sp.id_pengawas WHERE no_hp = :no_hp',
 								  array(':no_hp' => $phone_number));
-		$daftar = $daftar[0];
+		if (!empty($daftar))
+			$daftar = $daftar[0];
 
 		$error = 0;
 
@@ -46,7 +47,7 @@ class SmsGateway extends AbstractModel
 								$response = 'Pelaporan tersimpan';
 							} else {
 								$response = 'Harga Obat sesuai dengan het';
-								$error = 4;
+								$error = 5;
 							}
 					} else {
 						$response = 'Kode obat tidak terdaftar';
@@ -70,19 +71,26 @@ class SmsGateway extends AbstractModel
 		$logSms->message = $message;
 		$logSms->sms_center = $sms_center;
 		$logSms->error = $error;
-		$logSms->save();
+		// $logSms->save();
 
-		$opts = array(
-		  'http'=>array(
-		    'method'=>"GET",
-		    'header'=>"Accept-language: en\r\n"
-		  )
-		);
-		$context = stream_context_create($opts);
-		$url = (string) "http://192.168.173.189:9090/sendsms?phone=".urlencode($phone_number)."&text=".urlencode($response).'&password=';
+		$parameter = new Parameter();
+		$url_sms_gateway = $parameter->getParameter('SMS_GATE_WAY_URL');
 
-		//kirim sms
-		//echo $response;
-		$sms = file_get_contents($url, false, $context);
+		if ($url_sms_gateway) {
+			$opts = array(
+			  'http'=>array(
+			    'method'=>"GET",
+			    'header'=>"Accept-language: en\r\n"
+			  )
+			);
+			$context = stream_context_create($opts);
+			$url = (string) 'http://'. $url_sms_gateway .'/sendsms?phone='.urlencode($phone_number).'&text='.urlencode($response).'&password=';
+
+			//kirim sms
+			//echo $response;
+			$sms = file_get_contents($url, false, $context);
+		} else {
+			echo "SMS Gatewy error";
+		}
 	}
 }

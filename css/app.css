@@ -12,6 +12,12 @@
 a.btn {
 	text-decoration: none;
 }
+.x-toolbar-docked-top .x-table-plain {
+  min-width: 250px;
+}
+.x-toolbar-docked-top .x-form-text {
+  min-width: 200px;
+}
 
 .btn {
   display: inline-block;

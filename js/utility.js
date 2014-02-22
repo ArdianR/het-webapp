@@ -48,7 +48,7 @@ Ext.define('Ext.ux.grid.feature.Searching', {
 	 * Corresponding toolbar has to exist at least with mimimum configuration tbar:[] for position:top or bbar:[]
 	 * for position bottom. Plugin does NOT create any toolbar.
 	 */
-	position:'bottom',
+	position:'top',
 
 	/**
 	 * @cfg {String} iconCls Icon class for menu button (defaults to icon-magnifier)
@@ -140,13 +140,13 @@ Ext.define('Ext.ux.grid.feature.Searching', {
 	 * search controls to (defaults to this.grid, the grid this plugin is plugged-in into)
 	 */
 
-	attachEvents: function() {
-		this.grid = this.view.up('gridpanel');
-		if(this.grid.rendered)
-			this.onRender();
-		else
-			this.grid.on('render', this.onRender, this);
-	},
+	init: function(grid) {
+        this.grid = grid;
+        if(this.grid.rendered)
+            this.onRender();
+        else
+            this.grid.on('render', this.onRender, this);
+    },
 
 	onRender:function() {
 
@@ -444,15 +444,13 @@ Ext.define('Ext.ux.grid.feature.Searching', {
 
 	} // eo function reconfigure
 	// }}}
-
 });
 Ext.override(Ext.data.Store, {
 	listeners: {
 		load: function(self, records, successful, eOpts) {
+			var message = '';
 			if (!successful) {
-				var message = '';
-
-				if (typeof self.getProxy().reader.rawData.message === 'undefined')
+				if (typeof self.getProxy().reader.rawData === 'undefined')
 					message = 'Terjadi kesalahan sistem';
 				else
 					message = self.getProxy().reader.rawData.message;
@@ -463,6 +461,10 @@ Ext.override(Ext.data.Store, {
 					buttons: Ext.MessageBox.OK,
 					icon: Ext.MessageBox.ERROR
 				});
+			} else {
+				message = self.getProxy().reader.rawData.message;
+				if (message)
+					Ext.example.msg('Informasi', self.getProxy().reader.rawData.message);
 			}
 		}
 	}
@@ -480,6 +482,25 @@ Ext.data.proxy.Server.override({
 		});
 	}
 });
+
+Ext.example = function(){
+    var msgCt;
+
+    function createBox(t, s){
+       return '<div class="msg"><h3>' + t + '</h3><p>' + s + '</p></div>';
+    }
+    return {
+        msg : function(title, format){
+            if(!msgCt){
+                msgCt = Ext.core.DomHelper.insertFirst(document.body, {id:'msg-div'}, true);
+            }
+            var s = Ext.String.format.apply(String, Array.prototype.slice.call(arguments, 1));
+            var m = Ext.core.DomHelper.append(msgCt, createBox(title, s), true);
+            m.hide();
+            m.slideIn('t').ghost("t", { delay: 1000, remove: true});
+        }
+    };
+}();
 
 Ext.ns('Utility');
 
