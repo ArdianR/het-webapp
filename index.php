@@ -37,6 +37,7 @@
 
     $f3->route('GET     /pengawas',                 'Pengawas->lists');
     $f3->route('POST    /pengawas',                 'Pengawas->post');
+    $f3->route('GET     /pengawas/combo',           'Pengawas->combo');
     $f3->route('GET     /pengawas/@id',             'Pengawas->get');
     $f3->route('PUT     /pengawas/@id',             'Pengawas->put');
     $f3->route('DELETE  /pengawas/@id',             'Pengawas->delete');
@@ -48,7 +49,7 @@
     $f3->route('DELETE  /log_sms/@id',              'LogSMS->delete');
 
     $f3->route('GET     /parameter',                'Parameter->lists');
-    $f3->route('POST    /parameter',               'Parameter->post');
+    $f3->route('POST    /parameter',                'Parameter->post');
     $f3->route('GET     /parameter/@id',            'Parameter->get');
     $f3->route('PUT     /parameter/@id',            'Parameter->put');
     $f3->route('DELETE  /parameter/@id',            'Parameter->delete');

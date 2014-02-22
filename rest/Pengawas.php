@@ -16,4 +16,9 @@ class Pengawas extends AbstractModel
     public function lists($f3) {
     	$this->jsonList($f3, 'pengawas',  'nama ASC');
     }
+
+    public function combo($f3)
+    {
+        $this->jsonList($f3, 'v_combo_pengawas',  'nama_pengawas ASC');
+    }
 }

@@ -25,6 +25,12 @@ Ext.define('MSarana', {
     }]
 });
 
+Ext.define('MPengawasCombo', {
+    extend: 'Ext.data.Model',
+    idProperty: 'id_pengawas',
+    fields: ['id_pengawas', 'nama_pengawas']
+});
+
 var DataSarana = new Ext.create('Ext.data.Store', {
     model: 'MSarana',
     autoSync: true,
@@ -43,6 +49,17 @@ var DataSarana = new Ext.create('Ext.data.Store', {
         }
     }
 });
+
+var DataPengawasCombo = new Ext.create('Ext.data.Store', {
+    model: 'MPengawasCombo',
+    autoLoad: true,
+    proxy: {
+        type: 'ajax',
+        url: conf.BASE_URL + 'pengawas/combo',
+        actionMethods: {read: "GET"},
+        reader: {type: 'json', root: 'results'}
+    }
+})
 
 var rowEditingSarana = Ext.create('Ext.grid.plugin.CellEditing');
 
@@ -111,10 +128,18 @@ var GridSarana = Ext.create('Ext.grid.Panel', {
         dataIndex: 'id_pengawas',
         flex: 2,
         editor: {
-            xtype: 'textfield',
+            xtype: 'combobox',
+            valueField: 'id_pengawas',
+            displayField: 'nama_pengawas',
+            store: DataPengawasCombo,
+            listConfig: { cls: 'comboIndex' },
             allowBlank: false
+        },
+        renderer: function(value, meta, record) {
+            return record.data.nama_pengawas;
         }
     }],
+    selType: 'cellmodel',
     dockedItems: [{
         xtype: 'pagingtoolbar',
         store: DataSarana,

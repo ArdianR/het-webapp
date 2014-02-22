@@ -18,7 +18,9 @@ a.btn {
 .x-toolbar-docked-top .x-form-text {
   min-width: 200px;
 }
-
+.comboIndex {
+  z-index: 10000 !important;
+}
 .btn {
   display: inline-block;
   padding: 6px 12px;
