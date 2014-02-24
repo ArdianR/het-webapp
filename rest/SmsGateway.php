@@ -71,7 +71,7 @@ class SmsGateway extends AbstractModel
 		$logSms->message = $message;
 		$logSms->sms_center = $sms_center;
 		$logSms->error = $error;
-		// $logSms->save();
+		$logSms->save();
 
 		$parameter = new Parameter();
 		$url_sms_gateway = $parameter->getParameter('SMS_GATE_WAY_URL');

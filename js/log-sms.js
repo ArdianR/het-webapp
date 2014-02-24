@@ -42,22 +42,22 @@ var GridLogSMS = Ext.create('Ext.grid.Panel', {
     {
         header: 'No Telp',
         dataIndex: 'phone_number',
-        flex: 2
+        flex: 1
     },
     {
         header: 'Message',
         dataIndex: 'message',
-        flex: 2
+        flex: 1
     },
     {
         header: 'SMS Center`',
         dataIndex: 'sms_center',
-        flex: 2
+        flex: 1
     },
     {
         header: 'Waktu Terima',
         dataIndex: 'stamp',
-        flex: 2
+        flex: 1
     },
     {
         header: 'Error',
