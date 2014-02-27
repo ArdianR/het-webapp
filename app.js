@@ -218,7 +218,7 @@ Ext.application({
                 closable: true,
                 autoDestroy: true,
                 width: 600,
-                minWidth: 350,
+                minWidth: 800,
                 height: 350,
                 tools: [{type: 'pin'}],
                 layout: {

@@ -9,7 +9,7 @@ Ext.define('HET.view.pelaporan_het.List', {
 
     initComponent: function() {
         this.store = {
-            fields: ['id_sarana_pelayanan', 'nama_sarana', 'alamat', 'harga'],
+            fields: ['id_sarana_pelayanan', 'nama_sarana', 'alamat', 'harga', 'stamp'],
             autoLoad: false,
             autoDestroy: true,
             proxy: {
@@ -30,8 +30,8 @@ Ext.define('HET.view.pelaporan_het.List', {
                 itemId: 'no',
                 sortable: true
             },
-            {header: 'Nama Sarana Pelayanan',  dataIndex: 'nama_sarana',  flex: 1},
-            {header: 'Alamat',  dataIndex: 'alamat',  flex: 1},
+            {header: 'Nama Sarana',  dataIndex: 'nama_sarana',  flex: 1},
+            {header: 'Alamat',  dataIndex: 'alamat',  flex: 2},
             {
                 header: 'Harga Jual',
                 dataIndex: 'harga',
@@ -39,6 +39,11 @@ Ext.define('HET.view.pelaporan_het.List', {
                 renderer: function(value) {
                     return parseInt(value, 10).toMoney();
                 }
+            },
+            {
+                header: 'Tanggal Laporan',
+                dataIndex: 'stamp',
+                flex: 1
             }
         ];
 
